@@ -1,0 +1,94 @@
+/* =========================================================================
+   GLOBAL.CSS
+   Общие настройки проекта: подключение шрифтов, CSS-переменные (цвета,
+   шрифты, отступы), базовый reset. Эти правила не привязаны к конкретным
+   блокам сайта — за версткой блоков смотри в style.css
+   ========================================================================= */
+
+/* ---- Подключение шрифтов Google Fonts -------------------------------- */
+/* Jura   — используется для кнопок, навигации, подвала и основного текста */
+/* Tektur — используется для логотипа, заголовков кейсов и окна с текстом  */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&family=Tektur:wght@400;500;600;700;800&display=swap');
+
+/* ---- CSS reset ---------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+html {
+  scroll-behavior: smooth;
+}
+*/
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---- Переменные проекта -------------------------------------------------
+   Все цвета и шрифты сайта собраны здесь, чтобы менять их в одном месте.
+   --------------------------------------------------------------------- */
+:root {
+  /* Шрифты */
+  --font-main: 'Jura', sans-serif;     /* кнопки / навигация / подвал / текст блоков */
+  --font-accent: 'Tektur', sans-serif; /* логотип / заголовки кейсов / окно "текст" */
+
+  /* Основные цвета */
+  --color-header: #530900;         /* фон шапки и декоративного низа хедера */
+  --color-header-dark: #3a0500;    /* затемнение хедера (треугольник / тень) */
+  --color-paper: #f3efe6;          /* светлый "бумажный" фон hero-блока */
+  --color-paper-line: #e6ded0;     /* легкая обводка на светлом фоне */
+  --color-cta-bg: #4a4a4a;         /* фон CTA-полосы (градиент от этого цвета) */
+  --color-cta-bg-dark: #1c1c1c;    /* темный край градиента CTA-полосы */
+  --color-dark-section: #0c0c0c;   /* фон блока с описанием проекта */
+  --color-tan: #FFD699;            /* бежево-персиковая кнопка "Войти" и подвал */
+  --color-tan-dark: #DBC5A4;       /* подвал сайта (более темный беж) */
+  --color-gray-upload: #b9b9b9;    /* фон зоны загрузки файлов */
+  --color-gray-upload-border: #ffffff;
+  --color-text-dark: #1a1a1a;      /* основной темный текст */
+  --color-text-light: #f5f2ea;     /* светлый текст на темном фоне */
+  --color-text-muted: #4a4a4a;     /* приглушенный текст (подписи кейсов) */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Прочее */
+  --radius-pill: 700px;
+  --radius-card: 14px;
+  --max-width: 1500px;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
