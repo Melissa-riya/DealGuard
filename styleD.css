@@ -435,9 +435,9 @@
   color: var(--color-text-dark);
   margin-bottom: 10px;
 
-  word-wrap: break-word;       /* длинные слова переносятся */
-  overflow-wrap: break-word;   /* современный аналог */
-  hyphens: auto;               /* переносы по слогам */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
   line-height: 1.5;
 }
 
@@ -450,8 +450,8 @@
 
 .footer__brand-row {
   display: flex;
-  align-items: center;    /* выравнивание по вертикали */
-  gap: 12px;              /* отступ между щитом и текстом */
+  align-items: center;
+  gap: 12px;
   margin-top: 10px;
 }
 
@@ -514,17 +514,20 @@ body {
     padding-right: 210px;
     gap: 16px;
   }
-  .header__logo img { height: 80px; }
+  .header__logo img { height: 80px;
+  margin-top: 20px;
+  }
   .header__nav {
     transform: none;
     margin: 0;
     gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
   }
   .nav-pill { font-size: 18px; padding: 14px 22px; }
-  .header__lamp { width: 170px; right: 30px; pointer-events: none; }
-  .paper-trapezoid { width: 200px; height: 60px; right: 30px; }
+  .header__lamp {display: none;}
+  .paper-trapezoid {display: none;}
 
   /* HERO */
   .hero { padding: 90px 0; }
@@ -538,6 +541,7 @@ body {
     padding: 20px 60px;
     left: 30px;
     bottom: 100px;
+    margin-bottom: 100px;
   }
 
   /* ОПИСАНИЕ */
